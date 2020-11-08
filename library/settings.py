@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #Main Apps
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +53,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'library.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
