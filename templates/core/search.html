@@ -1,5 +1,30 @@
 {% extends 'base.html' %}
 
+{% block title %}
+	Search for {{search}}
+{% endblock %}
 
 {% block content %}
+
+{% include 'partials/_jumbotron.html' %}
+
+{% if books %}
+	<div class="row mt-3">
+		{% for pdf in books  %}
+			<div class="col-md-4 mt-3">
+				<div class="card" style="width: 18rem;">
+				  <img src="{{pdf.1}}" class="card-img-top">
+				  <div class="card-body">
+				    <h5 class="card-title">{{pdf.0|title}}</h5>
+				    <p class="card-text">Year : {{pdf.4}}</p>
+				    <p class="card-text">Pages : {{pdf.3}}</p>
+				    <p class="card-text">Downloads : {{pdf.5}}</p>
+				    <a href="https://pdfdrive.com/{{pdf.2}}" target="_blank" class="btn btn-primary">Checkout!</a>
+				  </div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}
+
 {% endblock %}

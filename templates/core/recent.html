@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Recent Searches
+{% endblock %}
+
+{% block content %}
+{% if searches %}
+	<div class="row">
+		<div class="col-md-8 mx-auto">
+			<ul class="list-group mt-3">
+				{% for search in searches %}
+	  				<li class="list-group-item text-center">{{ search |title }}</li>
+	  			{% endfor %}
+			</ul>
+		</div>
+	</div>
+{% else %}
+	<h1 class="display-1 mx-auto">
+		No Recent Searches
+	</h1>
+{% endif %}
+{% endblock %}

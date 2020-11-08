@@ -6,13 +6,26 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li 
+      {% if '/' == request.path %}
+        class="nav-item active"
+      {%  else %}
+        class="nav-item"
+      {% endif %}
+        >
         <a class="nav-link" href="{% url 'home' %}">Home</a>
       </li>
+      <li 
+        {% if 'recent-search' in request.path %}
+          class="nav-item active"
+        {%  else %}
+          class="nav-item"
+        {% endif %}>
+        <a class="nav-link" href="{% url 'recent-search' %}">Recent Searches</a>
+      </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <div class="inline my-2 my-lg-0">
+      <h5><a class="btn btn-success text-ehite" href="https://github.com/EyimofeP" target="_blank">Eyimofe Ayo Pinnick</a></h5>
+    </div>
   </div>
 </nav>

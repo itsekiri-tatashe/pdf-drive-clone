@@ -1,6 +1,10 @@
 <div class="jumbotron mt-3">
-  <h1 class="display-4">Welcome to PDF-Drive Clone</h1>
-  <p class="lead">Search for your free PDFs in a more simplistic, elegant way.</p>
+  {% if search %}
+    <h1 class="display-4">Search Results for {{search|title}}</h1>  
+  {% else %}
+    <h1 class="display-4">Welcome to PDF-Drive Clone</h1>
+    <p class="lead">Search for your free PDFs in a more simplistic, elegant way.</p>
+  {% endif %}
   
   <hr class="my-4">
   
