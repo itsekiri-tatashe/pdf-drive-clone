@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href='{% url 'home' %}'>PDF Library</a>
+  <a class="navbar-brand" href='{% url 'home' %}'><i class="fas fa-book" ></i> PDF Library</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -13,7 +13,7 @@
         class="nav-item"
       {% endif %}
         >
-        <a class="nav-link" href="{% url 'home' %}">Home</a>
+        <a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home" ></i> Home</a>
       </li>
       <li 
         {% if 'recent-search' in request.path %}
@@ -21,11 +21,11 @@
         {%  else %}
           class="nav-item"
         {% endif %}>
-        <a class="nav-link" href="{% url 'recent-search' %}">Recent Searches</a>
+        <a class="nav-link" href="{% url 'recent-search' %}"> <i class="fas fa-search" ></i> Recent Searches</a>
       </li>
     </ul>
     <div class="inline my-2 my-lg-0">
-      <h5><a class="btn btn-success text-ehite" href="https://github.com/EyimofeP" target="_blank">Eyimofe Ayo Pinnick</a></h5>
+      <h5><a class="btn btn-success text-ehite" href="https://github.com/EyimofeP" target="_blank"><i class="fab fa-github" ></i> Eyimofe Ayo Pinnick</a></h5>
     </div>
   </div>
 </nav>
