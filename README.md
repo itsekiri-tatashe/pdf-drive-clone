@@ -11,4 +11,12 @@ Run requirements.txt
     pip install -r requirements.txt
 
 ```
+___
+
+## Running The App
+In your terminal, Run The Following Code
+```
+    py manage.py migrate
+    py manage.py runserver
+```
 
