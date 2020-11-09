@@ -6,7 +6,13 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      
+      <li 
+      {% if '/' in request.path %}
+        class="nav-item active"
+      {%  else %}
+        class="nav-item"
+      {% endif %}
+        >
         <a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home" ></i> Home</a>
       </li>
       <li 
